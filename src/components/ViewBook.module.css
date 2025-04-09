@@ -1,0 +1,5 @@
+.details {
+  @apply absolute md:fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+  bg-dirtyWhite200 z-50 rounded-lg flex flex-col md:flex-row 
+  gap-5 p-5 w-[90%] max-w-4xl;
+}

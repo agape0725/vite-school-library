@@ -1,0 +1,98 @@
+{
+  "cities": [
+    { "id": 1, "name": "New York" },
+    { "id": 2, "name": "Los Angeles" }
+  ],
+  "countries": [
+    { "id": 1, "name": "USA" },
+    { "id": 2, "name": "Canada" }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "step": "Search for the Book",
+      "instruction": "Use the search bar to find the book by title, author, or category. Check if the book is available or already borrowed",
+      "icon": "../src/assets/icons/search-book.png",
+      "hoverIcon": "../src/assets/icons/animated/search-book.gif"
+    },
+    {
+      "id": 2,
+      "step": "Check book details",
+      "instruction": "View the book location (shelf location), you can find it under the book details",
+      "icon": "../src/assets/icons/bookmark.png",
+      "hoverIcon": "../src/assets/icons/animated/bookmark.gif"
+    },
+    {
+      "id": 3,
+      "step": "Visit the Library",
+      "instruction": "Go to the library and locate the book based on the shelf number/name and bring it to the circulation desk and follow the borrowing process",
+      "icon": "../src/assets/icons/library.png",
+      "hoverIcon": "../src/assets/icons/animated/library.gif"
+    },
+    {
+      "id": 4,
+      "step": "Take care of the book",
+      "instruction": "Keep the book in good condition and avoid damages and follow library rules regarding borrowing limits",
+      "icon": "../src/assets/icons/book-protect.png",
+      "hoverIcon": "../src/assets/icons/animated/book-protect.gif"
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How do I borrow a book?",
+      "answer": "You can borrow a book by logging into your library account, search for the book and check availability before going to the library."
+    },
+    {
+      "id": 2,
+      "question": "What is the borrowing period?",
+      "answer": "Books can be borrowed for up to 14 days. If no one else has requested the book, you may renew it."
+    },
+    {
+      "id": 3,
+      "question": "Can I access the library remotely?",
+      "answer": "Yes! Our e-library is available 24/7. You can log in from any device with an internet connection."
+    },
+
+    {
+      "id": 4,
+      "question": "How many books can I borrow at a time?",
+      "answer": "Students can borrow up to 5 books at a time. Teachers and staff may have a higher borrowing limit."
+    },
+    {
+      "id": 5,
+      "question": "How can I search for books in the library?",
+      "answer": "Use the search bar on the library website to find books by title, author, or subject. Filters are available to refine your search."
+    },
+    {
+      "id": 6,
+      "question": "Are there late fees for overdue books?",
+      "answer": "Yes, overdue physical books may have a small late fee. However, e-books will return automatically, so no late fees apply."
+    },
+    {
+      "id": 7,
+      "question": "What should I do if I lost a book?",
+      "answer": "Report the lost book to the librarian as soon as possible. You may be asked to replace the book or pay a replacement fee."
+    }
+  ],
+  "accounts": [
+    {
+      "studentNumber": "22015241610",
+      "firstname": "Dominic",
+      "lastname": "Gregorio",
+      "birthDate": "06/27/1997",
+      "address": "521 Main St. Sampaloc Manila",
+      "emailAddress": "domiquingreg25@yahoo.com",
+      "password": "111"
+    },
+    {
+      "studentNumber": "22013939310",
+      "firstname": "Charles Patrick",
+      "lastname": "Yu",
+      "birthDate": "01/16/2000",
+      "address": "998 Old Sta Mesa Kundiman Sampaloc Manila",
+      "emailAddress": "cpyu@yahoo.com",
+      "password": "222"
+    }
+  ]
+}

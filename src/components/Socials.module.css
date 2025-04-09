@@ -1,0 +1,16 @@
+.socials {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.socials li {
+  border: 1px white solid;
+  padding: 0.5rem;
+  border-radius: 100%;
+}
+
+.socials img {
+  width: 15px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(318deg)
+    brightness(102%) contrast(101%);
+}

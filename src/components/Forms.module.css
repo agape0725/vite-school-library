@@ -1,0 +1,15 @@
+.form {
+  @apply relative w-full h-screen;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.form::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Cover entire element */
+  background-image: url("../assets/images/bg-book.jpg");
+  background-size: contain;
+  background-position: center;
+  opacity: 0.1; /* Adjust opacity */
+  z-index: -1; /* Push behind content */
+}

@@ -1,0 +1,20 @@
+.nav {
+  @apply relative flex items-center justify-between shadow-inner py-1 px-10 bg-dirtyWhite;
+  overflow-x: hidden;
+}
+
+.nav > div {
+  top: 0;
+  right: 0;
+
+  @apply fixed justify-center md:static md:justify-end md:translate-x-0 md:border-none md:shadow-none md:bg-transparent flex items-center z-20 h-screen md:h-fit w-screen sm:w-80 md:w-full transition-all duration-300 ease-in-out bg-[rgba(255,255,255,0.6)] shadow-inner backdrop-blur-sm border-l-4 border-dirtyWhite;
+}
+
+.nav ul {
+  @apply md:flex items-center gap-3 md:gap-6 text-lg md:text-sm;
+}
+
+.nav div > img {
+  @apply absolute w-5 md:hidden cursor-pointer;
+  left: 10px;
+}

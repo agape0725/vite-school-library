@@ -1,0 +1,13 @@
+.accordionContainer {
+  background-image: url("../assets/images/stack-book-1.png");
+  background-attachment: fixed;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 70vh;
+  width: 100%;
+  z-index: -1;
+  right: 0;
+
+  @apply opacity-10 bg-cover md:opacity-20 md:bg-contain;
+}

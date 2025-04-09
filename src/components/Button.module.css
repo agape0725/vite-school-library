@@ -1,0 +1,67 @@
+.btn {
+  @apply uppercase cursor-pointer border-0 rounded;
+}
+
+.btn1 {
+  @apply bg-blue900 text-white border border-blue900 rounded-md text-sm;
+}
+
+.btn2 {
+  @apply text-blue900  border border-blue900 rounded-md text-sm;
+}
+
+.btn3 {
+  @apply relative text-white border border-white overflow-hidden z-10;
+}
+
+.btn3:hover::before {
+  width: 100%;
+}
+
+.padding1 {
+  @apply px-3 py-1 md:px-4 md:py-1.5;
+}
+
+.padding2 {
+  @apply px-4 py-2.5 md:px-7 md:py-3;
+}
+
+.hover1:hover {
+  @apply opacity-80;
+}
+
+.hover2:hover {
+  @apply text-white bg-blue900;
+}
+
+.hover3::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  width: 0%;
+  height: 100%;
+  background-color: #ffffff40; /* Change to desired color */
+  transform: translateX(-50%);
+  transition: width 150ms ease-in-out;
+}
+
+.back {
+  font-weight: 600;
+  background: none;
+  border: 1px solid currentColor;
+}
+
+.position {
+  font-weight: 700;
+  position: absolute;
+  z-index: 1000;
+  font-size: 1.4rem;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  /* background-color: var(--color-brand--2); */
+  /* color: var(--color-dark--1); */
+  box-shadow: 0 0.4rem 1.2rem rgba(36, 42, 46, 0.16);
+}

@@ -1,0 +1,37 @@
+.accordion {
+  @apply bg-white p-3 rounded shadow-md;
+  transition: all 50ms ease-out 100ms;
+}
+
+.accordion.active {
+  @apply border-t-2 border-orange100;
+}
+
+.accordion h1 {
+  @apply text-sm cursor-pointer;
+}
+
+.accordion img {
+  @apply w-2 h-2;
+}
+
+.accordion img.active {
+  filter: invert(87%) sepia(12%) saturate(4751%) hue-rotate(330deg)
+    brightness(101%) contrast(101%);
+}
+
+.accordion p {
+  @apply text-gray-500 text-xs font-light;
+  max-height: 0;
+  overflow-y: hidden;
+  opacity: 0;
+  transition: max-height 300ms ease-out, opacity 200ms ease-out 100ms,
+    margin 100ms ease-in;
+}
+
+.accordion p.active {
+  margin-top: 0.3rem;
+  max-height: 5vh;
+  overflow-y: visible;
+  opacity: 1;
+}
