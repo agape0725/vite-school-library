@@ -18,7 +18,7 @@ function Step({ step }) {
             className={`transition-all duration-100 ease-in-out w-20 md:w-14 md:p-1 ${
               isHovered ? "scale-150" : "scale-125"
             }`}
-            src={`${isHovered ? step.hoverIcon : step.icon}`} 
+            src={isHovered ? step.hoverIcon : step.icon}
             alt="steps"
           />
         </div>

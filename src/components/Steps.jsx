@@ -9,7 +9,6 @@ function Steps() {
       <SectionTitle fontColor="text-dirtyWhite">
         Steps on how to borrow
       </SectionTitle>
-      {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 m-auto gap-3 min-w-[200px] max-w-[1100px]"> */}
       <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-4 m-auto gap-3 min-w-[200px] max-w-[1100px]">
         {data.steps.map((step) => (
           <Step key={step.id} step={step} />
