@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Step.module.css";
-import { img } from "framer-motion/client";
+// import { img } from "framer-motion/client";
 
 function Step({ step }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -23,16 +23,11 @@ function Step({ step }) {
             className={`transition-transform duration-700 ease-in-out w-20 md:w-14 ${
               isHovered ? "md:scale-125" : "md:scale-75"
             }`}
-<<<<<<< HEAD
-            src={isHovered ? step.hoverIcon : step.icon}
-            alt="steps"
-=======
             style={{ willChange: "transform" }}
             src={`${import.meta.env.BASE_URL}${
               isHovered ? step.hoverIcon : step.icon
             }`}
             alt="step"
->>>>>>> d09e93e (Added dummy accounts for GitHub deployment)
           />
         </div>
         {/* <span className="text-3xl h-fit font-montserrat font-semibold text-blue900">
