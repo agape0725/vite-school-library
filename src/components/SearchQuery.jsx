@@ -14,7 +14,7 @@ function SearchQuery({ onSearchQuery, searchBy, onSearchBy }) {
       >
         <option value="title">Title</option>
         <option value="author">Author</option>
-        <option value="subject">Category</option>
+        <option value="category">Category</option>
       </select>
     </div>
   );

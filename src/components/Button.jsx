@@ -1,15 +1,22 @@
 import styles from "./Button.module.css";
 
-function Button({ children, onClick, type, padding, hover }) {
+function Button({
+  children,
+  onClick,
+  type = "button",
+  buttonStyleType,
+  padding,
+  hover,
+  className = "",
+}) {
   return (
-    <div>
-      <button
-        className={`${styles.btn} ${styles[type]} ${styles[padding]} ${styles[hover]}`}
-        onClick={onClick}
-      >
-        {children}
-      </button>
-    </div>
+    <button
+      type={type}
+      className={`${styles.btn} ${styles[buttonStyleType]} ${styles[padding]} ${styles[hover]} ${className}`}
+      onClick={onClick}
+    >
+      {children}
+    </button>
   );
 }
 

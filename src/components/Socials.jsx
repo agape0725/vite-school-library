@@ -7,7 +7,11 @@ function Socials() {
   return (
     <ul className={styles.socials}>
       <li>
-        <a href="#">
+        <a
+          href="https://www.facebook.com/AbeManilaCamp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={facebook} alt="facebook" />
         </a>
       </li>

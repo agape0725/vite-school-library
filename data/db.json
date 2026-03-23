@@ -1,98 +1,1193 @@
 {
-  "cities": [
-    { "id": 1, "name": "New York" },
-    { "id": 2, "name": "Los Angeles" }
-  ],
-  "countries": [
-    { "id": 1, "name": "USA" },
-    { "id": 2, "name": "Canada" }
-  ],
   "steps": [
     {
-      "id": 1,
+      "id": "1",
       "step": "Search for the Book",
       "instruction": "Use the search bar to find the book by title, author, or category. Check if the book is available or already borrowed",
-      "icon": "../src/assets/icons/search-book.png",
-      "hoverIcon": "../src/assets/icons/animated/search-book.gif"
+      "icon": "/assets/icons/search-book.png",
+      "hoverIcon": "/assets/icons/animated/search-book.gif"
     },
     {
-      "id": 2,
+      "id": "2",
       "step": "Check book details",
       "instruction": "View the book location (shelf location), you can find it under the book details",
-      "icon": "../src/assets/icons/bookmark.png",
-      "hoverIcon": "../src/assets/icons/animated/bookmark.gif"
+      "icon": "/assets/icons/bookmark.png",
+      "hoverIcon": "/assets/icons/animated/bookmark.gif"
     },
     {
-      "id": 3,
+      "id": "3",
       "step": "Visit the Library",
       "instruction": "Go to the library and locate the book based on the shelf number/name and bring it to the circulation desk and follow the borrowing process",
-      "icon": "../src/assets/icons/library.png",
-      "hoverIcon": "../src/assets/icons/animated/library.gif"
+      "icon": "/assets/icons/library.png",
+      "hoverIcon": "/assets/icons/animated/library.gif"
     },
     {
-      "id": 4,
+      "id": "4",
       "step": "Take care of the book",
       "instruction": "Keep the book in good condition and avoid damages and follow library rules regarding borrowing limits",
-      "icon": "../src/assets/icons/book-protect.png",
-      "hoverIcon": "../src/assets/icons/animated/book-protect.gif"
+      "icon": "/assets/icons/book-protect.png",
+      "hoverIcon": "/assets/icons/animated/book-protect.gif"
     }
   ],
   "faqs": [
     {
-      "id": 1,
+      "id": "1",
       "question": "How do I borrow a book?",
       "answer": "You can borrow a book by logging into your library account, search for the book and check availability before going to the library."
     },
     {
-      "id": 2,
+      "id": "2",
       "question": "What is the borrowing period?",
-      "answer": "Books can be borrowed for up to 14 days. If no one else has requested the book, you may renew it."
+      "answer": "Books can be borrowed for up to 4 days. If no one else has requested the book, you may renew it."
     },
     {
-      "id": 3,
+      "id": "3",
       "question": "Can I access the library remotely?",
       "answer": "Yes! Our e-library is available 24/7. You can log in from any device with an internet connection."
     },
-
     {
-      "id": 4,
+      "id": "4",
       "question": "How many books can I borrow at a time?",
       "answer": "Students can borrow up to 5 books at a time. Teachers and staff may have a higher borrowing limit."
     },
     {
-      "id": 5,
+      "id": "5",
       "question": "How can I search for books in the library?",
-      "answer": "Use the search bar on the library website to find books by title, author, or subject. Filters are available to refine your search."
+      "answer": "Use the search bar on the library website to find books by title, author, or category. Filters are available to refine your search."
     },
     {
-      "id": 6,
+      "id": "6",
       "question": "Are there late fees for overdue books?",
-      "answer": "Yes, overdue physical books may have a small late fee. However, e-books will return automatically, so no late fees apply."
+      "answer": "Yes, overdue physical books may have a small late fee."
     },
     {
-      "id": 7,
+      "id": "7",
       "question": "What should I do if I lost a book?",
       "answer": "Report the lost book to the librarian as soon as possible. You may be asked to replace the book or pay a replacement fee."
     }
   ],
   "accounts": [
     {
+      "id": "513c",
       "studentNumber": "22015241610",
       "firstname": "Dominic",
       "lastname": "Gregorio",
-      "birthDate": "06/27/1997",
-      "address": "521 Main St. Sampaloc Manila",
-      "emailAddress": "domiquingreg25@yahoo.com",
-      "password": "111"
+      "fullname": "Dominic Gregorio",
+      "image": "/assets/images/bulbasaur.jpg",
+      "birthDate": "September 07, 2000",
+      "address": "Legard St. Sampaloc",
+      "phoneNumber": "09625414441",
+      "emailAddress": "dqg@gmail.com",
+      "password": "111",
+      "gender": "Male",
+      "year": "",
+      "borrow": [],
+      "borrowed": [],
+      "overdue": [],
+      "favorite": [],
+      "returning": [],
+      "lost": [],
+      "history": [
+        {
+          "id": "9780060850524",
+          "title": "Brave New World",
+          "author_name": [
+            "Aldous Huxley"
+          ],
+          "category": [
+            "Dystopian",
+            "Science Fiction",
+            "Classic"
+          ],
+          "year": 1932,
+          "book_cover": "http://localhost:7000/assets/book-cover/brave-new-world.jpg"
+        },
+        {
+          "id": "9780618260300",
+          "title": "The Hobbit",
+          "author_name": [
+            "J.R.R. Tolkien"
+          ],
+          "category": [
+            "Fantasy",
+            "Adventure",
+            "Classic"
+          ],
+          "year": 1937,
+          "book_cover": "http://localhost:7000/assets/book-cover/the-hobbit.jpg"
+        },
+        {
+          "id": "9780060850524",
+          "title": "Brave New World",
+          "author_name": [
+            "Aldous Huxley"
+          ],
+          "category": [
+            "Dystopian",
+            "Science Fiction",
+            "Classic"
+          ],
+          "year": 1932,
+          "book_cover": "http://localhost:7000/assets/book-cover/brave-new-world.jpg"
+        },
+        {
+          "id": "9780141439518",
+          "title": "Pride and Prejudice",
+          "author_name": [
+            "Jane Austen"
+          ],
+          "category": [
+            "Classic",
+            "Romance",
+            "Historical Fiction"
+          ],
+          "year": 1813,
+          "book_cover": "http://localhost:7000/assets/book-cover/pride-and-prejudice.jpg"
+        },
+        {
+          "id": "9780141439518",
+          "title": "Pride and Prejudice",
+          "author_name": [
+            "Jane Austen"
+          ],
+          "category": [
+            "Classic",
+            "Romance",
+            "Historical Fiction"
+          ],
+          "year": 1813,
+          "book_cover": "http://localhost:7000/assets/book-cover/pride-and-prejudice.jpg"
+        },
+        {
+          "id": "9780060850524",
+          "title": "Brave New World",
+          "author_name": [
+            "Aldous Huxley"
+          ],
+          "category": [
+            "Dystopian",
+            "Science Fiction",
+            "Classic"
+          ],
+          "year": 1932,
+          "book_cover": "http://localhost:7000/assets/book-cover/brave-new-world.jpg"
+        }
+      ],
+      "role": "Admin",
+      "requestingForAdmin": true
     },
     {
-      "studentNumber": "22013939310",
-      "firstname": "Charles Patrick",
-      "lastname": "Yu",
-      "birthDate": "01/16/2000",
-      "address": "998 Old Sta Mesa Kundiman Sampaloc Manila",
-      "emailAddress": "cpyu@yahoo.com",
-      "password": "222"
+      "id": "1392",
+      "studentNumber": "11111111111",
+      "firstname": "Jane",
+      "lastname": "Doe",
+      "fullname": "Jane Doe",
+      "image": "/assets/images/unknown.png",
+      "birthDate": "January 01, 2000",
+      "address": "4141",
+      "phoneNumber": "09615434454",
+      "emailAddress": "414141@yahoo.com",
+      "password": "111",
+      "gender": "Female",
+      "year": "College",
+      "borrow": [],
+      "borrowed": [],
+      "overdue": [],
+      "favorite": [],
+      "returning": [],
+      "lost": [],
+      "history": [
+        {
+          "id": "9780060850524",
+          "title": "Brave New World",
+          "author_name": [
+            "Aldous Huxley"
+          ],
+          "category": [
+            "Dystopian",
+            "Science Fiction",
+            "Classic"
+          ],
+          "year": 1932,
+          "book_cover": "http://localhost:7000/assets/book-cover/brave-new-world.jpg"
+        },
+        {
+          "id": "9780060850524",
+          "title": "Brave New World",
+          "author_name": [
+            "Aldous Huxley"
+          ],
+          "category": [
+            "Dystopian",
+            "Science Fiction",
+            "Classic"
+          ],
+          "year": 1932,
+          "book_cover": "http://localhost:7000/assets/book-cover/brave-new-world.jpg"
+        },
+        {
+          "id": "9780141439518",
+          "title": "Pride and Prejudice",
+          "author_name": [
+            "Jane Austen"
+          ],
+          "category": [
+            "Classic",
+            "Romance",
+            "Historical Fiction"
+          ],
+          "year": 1813,
+          "book_cover": "http://localhost:7000/assets/book-cover/pride-and-prejudice.jpg"
+        },
+        {
+          "id": "9780060850524",
+          "title": "Brave New World",
+          "author_name": [
+            "Aldous Huxley"
+          ],
+          "category": [
+            "Dystopian",
+            "Science Fiction",
+            "Classic"
+          ],
+          "year": 1932,
+          "book_cover": "http://localhost:7000/assets/book-cover/brave-new-world.jpg"
+        }
+      ],
+      "role": "Student",
+      "requestingForAdmin": false
+    },
+    {
+      "id": "a2aa",
+      "studentNumber": "22222222222",
+      "firstname": "Mark",
+      "lastname": "Sumlay",
+      "fullname": "Mark Sumlay",
+      "image": "/assets/images/unknown.png",
+      "birthDate": "January 01, 2000",
+      "address": "Main St. Lardizabal",
+      "phoneNumber": "09585858855",
+      "emailAddress": "marklay@gmail.com",
+      "password": "111",
+      "gender": "Male",
+      "year": "College",
+      "borrow": [],
+      "borrowed": [],
+      "overdue": [],
+      "favorite": [],
+      "returning": [],
+      "lost": [],
+      "history": [
+        {
+          "id": "9780141439518",
+          "title": "Pride and Prejudice",
+          "author_name": [
+            "Jane Austen"
+          ],
+          "category": [
+            "Classic",
+            "Romance",
+            "Historical Fiction"
+          ],
+          "year": 1813,
+          "book_cover": "http://localhost:7000/assets/book-cover/pride-and-prejudice.jpg"
+        },
+        {
+          "id": "9780060850524",
+          "title": "Brave New World",
+          "author_name": [
+            "Aldous Huxley"
+          ],
+          "category": [
+            "Dystopian",
+            "Science Fiction",
+            "Classic"
+          ],
+          "year": 1932,
+          "book_cover": "http://localhost:7000/assets/book-cover/brave-new-world.jpg"
+        }
+      ],
+      "role": "Student",
+      "requestingForAdmin": false
+    },
+    {
+      "id": "85ef",
+      "studentNumber": "33333333333",
+      "firstname": "John",
+      "lastname": "Christian",
+      "fullname": "John Christian",
+      "image": "/assets/images/unknown.png",
+      "birthDate": "January 01, 2000",
+      "address": "Legarda Delgado",
+      "phoneNumber": "09558585855",
+      "emailAddress": "johnchris@gmail.com",
+      "password": "111",
+      "gender": "Male",
+      "year": "College",
+      "borrow": [],
+      "borrowed": [],
+      "overdue": [],
+      "favorite": [],
+      "returning": [],
+      "lost": [],
+      "history": [
+        {
+          "id": "9780060850524",
+          "title": "Brave New World",
+          "author_name": [
+            "Aldous Huxley"
+          ],
+          "category": [
+            "Dystopian",
+            "Science Fiction",
+            "Classic"
+          ],
+          "year": 1932,
+          "book_cover": "http://localhost:7000/assets/book-cover/brave-new-world.jpg"
+        }
+      ],
+      "role": "Student",
+      "requestingForAdmin": false
+    }
+  ],
+  "books": [
+    {
+      "id": "9780060935467",
+      "key": "9780060935467",
+      "title": "To Kill a Mockingbird",
+      "author_name": [
+        "Harper Lee",
+        "Dominic Gregorio"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1960,
+      "book_cover": "assets/book-cover/to-kill-a-mockingbird.jpg",
+      "description": "In the quiet streets of Maycomb, Alabama, darkness stirs beneath the calm. Through the watchful eyes of young Scout Finch, To Kill a Mockingbird unravels secrets of courage, betrayal, and an unyielding fight for justice. As an innocent man stands accused, and whispers of a reclusive neighbor haunt the night, the line between right and wrong blurs. Harper Lee’s masterpiece draws you into a world where truth hides in the shadows—and only the brave dare to seek it.",
+      "category": [
+        "Classic",
+        "Historical Fiction",
+        "Drama"
+      ],
+      "rating": 3.9,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780451524935",
+      "key": "9780451524935",
+      "title": "1984",
+      "author_name": [
+        "George Orwell"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1949,
+      "book_cover": "assets/book-cover/1984.jpg",
+      "description": "In a world where every thought is watched and every word is controlled, truth is no longer what it seems. In George Orwell’s 1984, Winston Smith dares to question a regime that rewrites the past and dictates the future. As the shadow of Big Brother looms, rebellion becomes both dangerous and irresistible—a spark that could ignite hope, or extinguish it forever. Step into a chilling vision of power, surveillance, and the fragile fight for freedom.",
+      "category": [
+        "Dystopian",
+        "Political Fiction",
+        "Classic"
+      ],
+      "rating": 4.17,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780141439518",
+      "key": "9780141439518",
+      "title": "Pride and Prejudice",
+      "author_name": [
+        "Jane Austen"
+      ],
+      "first_publish_year": 1813,
+      "book_cover": "assets/book-cover/pride-and-prejudice.jpg",
+      "description": "In Jane Austen’s timeless classic, Elizabeth Bennet navigates the challenges of love, class, and pride in 19th-century England. With sharp wit and enduring charm, the novel explores the delicate balance between societal expectations and genuine affection, proving that first impressions are not always what they seem.",
+      "category": [
+        "Classic",
+        "Romance",
+        "Historical Fiction"
+      ],
+      "rating": 4.26,
+      "totalQuantity": 2,
+      "availableQuantity": 2,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780743273565",
+      "key": "9780743273565",
+      "title": "The Great Gatsby",
+      "author_name": [
+        "F. Scott Fitzgerald"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1925,
+      "book_cover": "assets/book-cover/the-great-gatsby.jpg",
+      "description": "Set in the dazzling Jazz Age, The Great Gatsby tells the story of Jay Gatsby’s relentless pursuit of love, wealth, and the elusive American Dream. Through Nick Carraway’s eyes, we witness a world of opulence, secrets, and shattered illusions, where hope shines brightly yet fades tragically under the weight of reality.",
+      "category": [
+        "Classic",
+        "Tragedy",
+        "Historical Fiction"
+      ],
+      "rating": 3.91,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9781503280786",
+      "key": "9781503280786",
+      "title": "Moby-Dick",
+      "author_name": [
+        "Herman Melville"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1851,
+      "book_cover": "assets/book-cover/moby-dick.jpg",
+      "description": "On the endless, unforgiving sea, obsession becomes a man’s compass—and his doom. In Herman Melville’s Moby-Dick, Captain Ahab hunts the legendary white whale with a fury that defies reason, dragging his crew into a perilous voyage where nature, fate, and vengeance collide. Beneath the crashing waves lies a tale of madness, mortality, and the price of pursuing the impossible.",
+      "category": [
+        "Classic",
+        "Tragedy",
+        "Historical Fiction"
+      ],
+      "rating": 3.49,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780316769174",
+      "key": "9780316769174",
+      "title": "The Catcher in the Rye",
+      "author_name": [
+        "J.D. Salinger"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1951,
+      "book_cover": "assets/book-cover/the-catcher-in-the-rye.jpg",
+      "description": "Behind the bustling streets of New York City, a restless voice searches for meaning in a world that feels hollow and unkind. In J.D. Salinger’s The Catcher in the Rye, Holden Caulfield wanders through days of rebellion, loneliness, and quiet despair—haunted by questions he can’t escape and truths he may not be ready to face. It’s a journey through innocence lost, and the fragile line between youth and adulthood.",
+      "category": [
+        "Classic",
+        "Coming-of-Age",
+        "Literary Fiction"
+      ],
+      "rating": 3.81,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780060850524",
+      "key": "9780060850524",
+      "title": "Brave New World",
+      "author_name": [
+        "Aldous Huxley"
+      ],
+      "first_publish_year": 1932,
+      "book_cover": "assets/book-cover/brave-new-world.jpg",
+      "description": "In a future where pleasure is engineered, freedom is forbidden, and humanity is manufactured, perfection comes at a chilling price. In Aldous Huxley’s Brave New World, a society built on control and comfort hides a darkness no one dares to question—until one man does. Step inside a world where happiness is mandatory, individuality is a crime, and the cost of awakening may be too high to bear.",
+      "category": [
+        "Dystopian",
+        "Science Fiction",
+        "Classic"
+      ],
+      "rating": 3.99,
+      "totalQuantity": 3,
+      "availableQuantity": 3,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780618260300",
+      "key": "9780618260300",
+      "title": "The Hobbit",
+      "author_name": [
+        "J.R.R. Tolkien"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1937,
+      "book_cover": "assets/book-cover/the-hobbit.jpg",
+      "description": "Beneath the quiet hills of the Shire lies an adventure waiting to be awakened. In J.R.R. Tolkien’s The Hobbit, Bilbo Baggins is swept from his peaceful home into a perilous quest filled with dwarves, dragons, and dark, winding roads. What begins as an unwelcome journey soon becomes a test of courage, wit, and the hidden strength of an unlikely hero.",
+      "category": [
+        "Fantasy",
+        "Adventure",
+        "Classic"
+      ],
+      "rating": 4.27,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9781451673319",
+      "key": "9781451673319",
+      "title": "Fahrenheit 451",
+      "author_name": [
+        "Ray Bradbury"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1953,
+      "book_cover": "assets/book-cover/farenheit-451.jpg",
+      "description": "In a future where books burn and knowledge is forbidden, firemen ignite the flames instead of putting them out. In Ray Bradbury’s Fahrenheit 451, Guy Montag begins to question the world he once served—a society lulled by screens, silenced by fear, and starved of truth. As sparks of rebellion catch fire, he must choose between blind obedience and the dangerous pursuit of freedom.",
+      "category": [
+        "Dystopian",
+        "Science Fiction",
+        "Classic"
+      ],
+      "rating": 3.99,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9781503278196",
+      "key": "9781503278196",
+      "title": "Jane Eyre",
+      "author_name": [
+        "Charlotte Brontë"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1847,
+      "book_cover": "assets/book-cover/jane-eyre.jpg",
+      "description": "Behind the cold walls of Thornfield Hall, secrets wait in the shadows. In Charlotte Brontë’s Jane Eyre, a young woman of fierce spirit and quiet strength must navigate love, loss, and a haunting mystery that threatens to shatter everything she holds dear. Her journey is one of resilience and courage—a fight for independence in a world determined to silence her heart.",
+      "category": [
+        "Classic",
+        "Romance",
+        "Gothic Fiction"
+      ],
+      "rating": 5,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780679734505",
+      "key": "9780679734505",
+      "title": "Crime and Punishment",
+      "author_name": [
+        "Fyodor Dostoevsky"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1866,
+      "book_cover": "assets/book-cover/crime-and-punishment.jpg",
+      "description": "In the stifling streets of St. Petersburg, a desperate man crosses a line that cannot be uncrossed. In Fyodor Dostoevsky’s Crime and Punishment, Raskolnikov’s chilling act of murder sets off a relentless battle between guilt and redemption, reason and madness. As the walls close in, every shadow feels like judgment, and every whispered footstep could bring the truth crashing down.",
+      "category": [
+        "Classic",
+        "Philosophical Fiction",
+        "Psychological"
+      ],
+      "rating": 4.21,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780141439556",
+      "key": "9780141439556",
+      "title": "Wuthering Heights",
+      "author_name": [
+        "Emily Brontë"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1847,
+      "book_cover": "assets/book-cover/wuthering-heights.jpg",
+      "description": "On the lonely Yorkshire moors, love turns to obsession and passion to vengeance. In Emily Brontë’s Wuthering Heights, Heathcliff and Catherine’s wild, unyielding bond defies time and reason, leaving destruction in its wake. Amid storm-swept hills and haunted halls, this is a tale where love is as fierce as the wind—and just as untamed.",
+      "category": [
+        "Classic",
+        "Gothic Fiction",
+        "Romance"
+      ],
+      "rating": 3.84,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780140268867",
+      "key": "9780140268867",
+      "title": "The Odyssey",
+      "author_name": [
+        "Homer"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1600,
+      "book_cover": "assets/book-cover/the-odyssey.jpg",
+      "description": "Across treacherous seas and distant shores, a hero struggles to find his way home. In Homer’s The Odyssey, Odysseus faces vengeful gods, deadly creatures, and the endless pull of fate itself. His journey is one of cunning, courage, and relentless endurance—a timeless epic where every victory carries a price, and every horizon hides a new peril.",
+      "category": [
+        "Classic",
+        "Epic Poetry",
+        "Mythology"
+      ],
+      "rating": 3.75,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780143035008",
+      "key": "9780143035008",
+      "title": "Anna Karenina",
+      "author_name": [
+        "Leo Tolstoy"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1877,
+      "book_cover": "assets/book-cover/anna-karenina.jpg",
+      "description": "In the glittering salons of Imperial Russia, love becomes a dangerous game. In Leo Tolstoy’s Anna Karenina, passion collides with duty, and desire defies the rigid rules of society. As Anna risks everything for a forbidden love, whispers of scandal grow louder, and every choice carries the weight of tragedy.",
+      "category": [
+        "Classic",
+        "Romance",
+        "Tragedy"
+      ],
+      "rating": 4.04,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780374528379",
+      "key": "9780374528379",
+      "title": "The Brothers Karamazov",
+      "author_name": [
+        "Fyodor Dostoevsky"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1880,
+      "book_cover": "assets/book-cover/the-brothers-karamazov.jpg",
+      "description": "In a household torn apart by greed, jealousy, and faith, three brothers walk a path toward a crime that will shake them all. In Fyodor Dostoevsky’s The Brothers Karamazov, questions of morality, free will, and the existence of God collide in a tale of betrayal and blood. As passions boil and suspicions rise, truth becomes as elusive as justice itself.",
+      "category": [
+        "Classic",
+        "Philosophical Fiction",
+        "Family Drama"
+      ],
+      "rating": 4.32,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780671504397",
+      "key": "9780671504397",
+      "title": "Les Misérables",
+      "author_name": [
+        "Victor Hugo"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1862,
+      "book_cover": "assets/book-cover/les-miserables.jpg",
+      "description": "In the shadowed streets of 19th-century France, justice and mercy wage a relentless war. In Victor Hugo’s Les Misérables, the hunted ex-convict Jean Valjean seeks redemption while the unyielding Inspector Javert pursues him with iron resolve. Amid revolution, poverty, and love found in the unlikeliest of places, every soul must choose between vengeance and grace.",
+      "category": [
+        "Classic",
+        "Historical Fiction",
+        "Drama"
+      ],
+      "rating": 4.19,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780142437230",
+      "key": "9780142437230",
+      "title": "Don Quixote",
+      "author_name": [
+        "Miguel de Cervantes"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1605,
+      "book_cover": "assets/book-cover/don-quixote.jpg",
+      "description": "In a world that has forgotten chivalry, one man dares to dream it alive again. In Miguel de Cervantes’ Don Quixote, a deluded knight and his loyal squire set out on a quest where windmills become giants, inns become castles, and reality itself bends to the power of imagination. Both comic and tragic, this timeless tale asks how far we should go in pursuit of our ideals—and what happens when the dream collides with the truth.",
+      "category": [
+        "Classic",
+        "Satire",
+        "Adventure"
+      ],
+      "rating": 3.87,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780451208637",
+      "key": "9780451208637",
+      "title": "The Divine Comedy",
+      "author_name": [
+        "Dante Alighieri"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1320,
+      "book_cover": "assets/book-cover/divine-comedy.jpg",
+      "description": "Through a dark wood and into realms beyond mortal sight, one soul journeys toward eternal truth. In Dante Alighieri’s The Divine Comedy, the poet descends into the terrors of Hell, ascends the trials of Purgatory, and beholds the radiant glory of Paradise. Guided by reason and divine love, this epic vision reveals humanity’s deepest sins, highest hopes, and the path to redemption.",
+      "category": [
+        "Classic",
+        "Epic Poetry",
+        "Religious"
+      ],
+      "rating": 4.11,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9781503261389",
+      "key": "9781503261389",
+      "title": "Dracula",
+      "author_name": [
+        "Bram Stoker"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1897,
+      "book_cover": "assets/book-cover/dracula.jpg",
+      "description": "Across stormy seas and moonlit castles, an ancient evil rises from the shadows. In Bram Stoker’s Dracula, a young solicitor’s journey to Transylvania unravels into a nightmare of terror, as Count Dracula spreads his dark curse from a distant land to the heart of England. In a chilling battle between fear and courage, the living must stand against the immortal.",
+      "category": [
+        "Classic",
+        "Gothic Fiction",
+        "Horror"
+      ],
+      "rating": 3.99,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9789354402494",
+      "key": "9789354402494",
+      "title": "Frankenstein",
+      "author_name": [
+        "Mary Shelley"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1818,
+      "book_cover": "assets/book-cover/frankenstein.jpg",
+      "description": "In the pursuit of forbidden knowledge, a brilliant mind gives life to something he cannot control. In Mary Shelley’s Frankenstein, Victor Frankenstein’s creation awakens not as a triumph, but as a haunting curse—turning ambition into terror and genius into guilt. Amid icy mountains and shadowed graves, creator and creature are bound by a fate neither can escape.",
+      "category": [
+        "Classic",
+        "Gothic Fiction",
+        "Science Fiction"
+      ],
+      "rating": 3.84,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780141439570",
+      "key": "9780141439570",
+      "title": "The Picture of Dorian Gray",
+      "author_name": [
+        "Oscar Wilde"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1890,
+      "book_cover": "assets/book-cover/dorian-gray.jpg",
+      "description": "In a glittering world of beauty and desire, one man trades his soul for eternal youth. In Oscar Wilde’s The Picture of Dorian Gray, every pleasure is pursued, every vice indulged, while a hidden portrait bears the weight of his corruption. As Dorian’s sins grow darker, the cost of his vanity becomes impossible to hide forever.",
+      "category": [
+        "Classic",
+        "Philosophical Fiction",
+        "Gothic Fiction"
+      ],
+      "rating": 4.07,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9781503219700",
+      "key": "9781503219700",
+      "title": "A Tale of Two Cities",
+      "author_name": [
+        "Charles Dickens"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1859,
+      "book_cover": "assets/book-cover/tale-of-two-cities.jpg",
+      "description": "In an age of revolution, love and sacrifice are tested against the roar of the guillotine. In Charles Dickens’ A Tale of Two Cities, the fates of Paris and London entwine as vengeance brews, loyalty wavers, and redemption is found in the shadow of death. Amid whispered plots and surging crowds, every heartbeat carries the weight of history.",
+      "category": [
+        "Classic",
+        "Historical Fiction",
+        "Drama"
+      ],
+      "rating": 3.88,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780760708705",
+      "key": "9780760708705",
+      "title": "Great Expectations",
+      "author_name": [
+        "Charles Dickens"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1861,
+      "book_cover": "assets/book-cover/great-expectations.jpg",
+      "description": "From the misty marshes to the glittering streets of London, a young orphan is swept into a world of secrets, ambition, and betrayal. In Charles Dickens’ Great Expectations, Pip’s sudden rise in fortune hides a shadowy truth, and every step toward his dream carries the weight of deception. It is a tale of love, loss, and the price of yearning for more than life first gave.",
+      "category": [
+        "Classic",
+        "Coming-of-Age",
+        "Literary Fiction"
+      ],
+      "rating": 3.81,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780140449266",
+      "key": "9780140449266",
+      "title": "The Count of Monte Cristo",
+      "author_name": [
+        "Alexandre Dumas"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1844,
+      "book_cover": "assets/book-cover/monte-cristo.jpg",
+      "description": "Betrayed and imprisoned for a crime he did not commit, a man escapes the darkness with only one purpose: vengeance. In Alexandre Dumas’ The Count of Monte Cristo, Edmond Dantès transforms from a wronged sailor into a figure of power and mystery, striking fear into those who conspired against him. But in his relentless pursuit of justice, he must decide whether revenge will free him—or consume him entirely.",
+      "category": [
+        "Classic",
+        "Adventure",
+        "Historical Fiction"
+      ],
+      "rating": 4.26,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780679720201",
+      "key": "9780679720201",
+      "title": "The Stranger",
+      "author_name": [
+        "Albert Camus"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1942,
+      "book_cover": "assets/book-cover/the-stranger.jpg",
+      "description": "Under the blazing sun of Algeria, a man drifts through life with unsettling indifference—until a single act shatters everything. In Albert Camus’ The Stranger, Meursault confronts a world stripped of meaning, where justice feels hollow and existence itself demands an answer. Stark and haunting, this is a story of alienation, fate, and the silence of the universe.",
+      "category": [
+        "Classic",
+        "Philosophical Fiction",
+        "Literary Fiction"
+      ],
+      "rating": 4.02,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780684800714",
+      "key": "9780684800714",
+      "title": "The Sun Also Rises",
+      "author_name": [
+        "Ernest Hemingway"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1926,
+      "book_cover": "assets/book-cover/sun-also-rises.jpg",
+      "description": "Amid the glitter of Paris cafés and the dust of Spanish bullrings, a restless generation searches for meaning in a world forever changed by war. In Ernest Hemingway’s The Sun Also Rises, love and friendship tangle with disillusionment as a group of expatriates wander through nights of wine and days of longing. Beneath the charm and adventure lies a quiet question: what remains when the revelry fades?",
+      "category": [
+        "Classic",
+        "Literary Fiction",
+        "Historical Fiction"
+      ],
+      "rating": 3.79,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780385333849",
+      "key": "9780385333849",
+      "title": "Slaughterhouse-Five",
+      "author_name": [
+        "Kurt Vonnegut"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1969,
+      "book_cover": "assets/book-cover/slaughterhouse-five.jpg",
+      "description": "Billy Pilgrim becomes 'unstuck in time' and experiences moments from his life out of order, including his capture during World War II and his time on the alien planet Tralfamadore. Kurt Vonnegut’s satirical novel explores the horrors of war, free will, and the illusion of time in a darkly comic, unforgettable way.",
+      "category": [
+        "Classic",
+        "Science Fiction",
+        "War"
+      ],
+      "rating": 4.09,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780679723165",
+      "key": "9780679723165",
+      "title": "Lolita",
+      "author_name": [
+        "Vladimir Nabokov"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1955,
+      "book_cover": "assets/book-cover/lolita.jpg",
+      "description": "Behind a façade of charm and eloquence lies a tale of obsession and ruin. In Vladimir Nabokov’s Lolita, Humbert Humbert’s seductive narration hides a dark truth, as desire leads to deception, and love is corrupted by control. Brilliant and unsettling, this modern classic forces readers to confront the fragile line between passion and monstrosity.",
+      "category": [
+        "Classic",
+        "Literary Fiction",
+        "Psychological"
+      ],
+      "rating": 3.91,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780684163260",
+      "key": "9780684163260",
+      "title": "The Old Man and the Sea",
+      "author_name": [
+        "Ernest Hemingway"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1952,
+      "book_cover": "assets/book-cover/old-man-and-sea.jpg",
+      "description": "Far out on the endless sea, an aging fisherman battles a mighty marlin—and his own unyielding fate. In Ernest Hemingway’s The Old Man and the Sea, strength and spirit are tested to their limits in a solitary struggle against nature’s power and life’s relentless tides. This timeless tale is both an epic adventure and a meditation on courage, loss, and the quiet dignity of perseverance.",
+      "category": [
+        "Classic",
+        "Adventure",
+        "Literary Fiction"
+      ],
+      "rating": 3.79,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780140177398",
+      "key": "9780140177398",
+      "title": "Of Mice and Men",
+      "author_name": [
+        "John Steinbeck"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1937,
+      "book_cover": "assets/book-cover/of-mice-and-men.jpg",
+      "description": "In the dusty fields of Depression-era California, two drifters share a dream too fragile for the harsh world around them. In John Steinbeck’s Of Mice and Men, George and Lennie chase the promise of freedom and belonging, but fate—and human nature—threaten to tear it away. A tale of hope, sacrifice, and shattered innocence, it asks how far friendship can carry us when the world turns cold.",
+      "category": [
+        "Classic",
+        "Tragedy",
+        "Literary Fiction"
+      ],
+      "rating": 3.88,
+      "added_at": "2025-08-10T20:36:28.055Z",
+      "isLost": false
+    },
+    {
+      "id": "9780571334643",
+      "key": "9780571334643",
+      "title": "Normal People",
+      "author_name": [
+        "Rooney Sally"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 2018,
+      "book_cover": "assets/book-cover/normal-people.jpg",
+      "description": "\"Normal people\" by sally rooney is a coming-of-age story that\n      follows the complex relationship between connell and marianne, two young\n      people from the same small town in ireland, as they navigate their teenage\n      years and early adulthood. The novel explores themes of social class,\n      love, and the challenges of communication, particularly through their\n      on-again, off-again relationship.",
+      "category": [
+        "Romance",
+        "Drama",
+        "Contemporary Fiction"
+      ],
+      "rating": 3.2,
+      "added_at": "2025-10-21T16:22:59.129Z",
+      "isLost": false
+    },
+    {
+      "id": "9780525478812",
+      "key": "9780525478812",
+      "title": "The Fault in our Stars",
+      "author_name": [
+        "John Green"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 2012,
+      "book_cover": "assets/book-cover/the-fault-in-our-stars.jpg",
+      "description": "\"The Fault in Our Stars\" by John Green is a young adult novel\n      that tells the story of Hazel Grace Lancaster, a 16-year-old with terminal\n      cancer, and her relationship with Augustus Waters, another cancer patient\n      she meets at a support group. The novel explores themes of love, loss, and\n      the challenges of navigating life with a terminal illness. Hazel and\n      Augustus's relationship develops amidst their shared experiences with\n      cancer, their quest to meet the author of their favorite book, and their\n      attempts to find meaning and purpose in their lives.",
+      "category": [
+        "Romance",
+        "Drama"
+      ],
+      "rating": 4.8,
+      "added_at": "2025-10-21T16:25:42.143Z",
+      "isLost": false
+    },
+    {
+      "id": "9780151072552",
+      "key": "9780151072552",
+      "title": "Animal Farm",
+      "author_name": [
+        "George Orwell"
+      ],
+      "totalQuantity": 1,
+      "availableQuantity": 1,
+      "first_publish_year": 1945,
+      "book_cover": "assets/book-cover/animal-farm.jpg",
+      "description": "\"Animal Farm,\" a novella by George Orwell, is a satirical\n      allegory of the Russian Revolution and the subsequent Stalinist era. The\n      story depicts a group of farm animals who overthrow their human farmer,\n      hoping to establish a society of equality and prosperity. However, the\n      pigs, particularly Napoleon, gradually seize control, leading to a\n      totalitarian regime that mirrors the corruption and oppression of the\n      Soviet Union under Stalin.",
+      "category": [
+        "Political Fiction",
+        "Satire",
+        "Classic"
+      ],
+      "rating": 4.4,
+      "added_at": "2025-12-01T16:08:17.022Z",
+      "isLost": false
+    }
+  ],
+  "borrow_history": [
+    {
+      "id": "TXN-20260111055009088-675",
+      "studentId": "22015241610",
+      "bookId": "9780060850524",
+      "fullname": "Dominic Gregorio",
+      "year": "Admin",
+      "bookTitle": "Brave New World",
+      "lentDate": "January 11, 2026 at 01:50 PM",
+      "returnDate": "March 24, 2026 at 05:51 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260111055110256-20",
+      "studentId": "11111111111",
+      "bookId": "9780060850524",
+      "fullname": "Jane Doe",
+      "year": "College",
+      "bookTitle": "Brave New World",
+      "lentDate": "January 11, 2026 at 01:51 PM",
+      "returnDate": "March 24, 2026 at 05:53 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260323215206548-170",
+      "studentId": "22015241610",
+      "bookId": "9780618260300",
+      "fullname": "Dominic Gregorio",
+      "year": "Admin",
+      "bookTitle": "The Hobbit",
+      "lentDate": "March 24, 2026 at 05:52 AM",
+      "returnDate": "March 24, 2026 at 05:52 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260323215524244-373",
+      "studentId": "22015241610",
+      "bookId": "9780060850524",
+      "fullname": "Dominic Gregorio",
+      "year": "Admin",
+      "bookTitle": "Brave New World",
+      "lentDate": "March 24, 2026 at 05:55 AM",
+      "returnDate": "March 24, 2026 at 06:01 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260323215550234-28",
+      "studentId": "11111111111",
+      "bookId": "9780060850524",
+      "fullname": "Jane Doe",
+      "year": "College",
+      "bookTitle": "Brave New World",
+      "lentDate": "March 24, 2026 at 05:55 AM",
+      "returnDate": "March 24, 2026 at 06:02 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260323215856283-924",
+      "studentId": "22015241610",
+      "bookId": "9780141439518",
+      "fullname": "Dominic Gregorio",
+      "year": "Admin",
+      "bookTitle": "Pride and Prejudice",
+      "lentDate": "March 24, 2026 at 05:58 AM",
+      "returnDate": "March 24, 2026 at 06:00 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260323215943406-355",
+      "studentId": "22222222222",
+      "bookId": "9780141439518",
+      "fullname": "Mark Sumlay",
+      "year": "College",
+      "bookTitle": "Pride and Prejudice",
+      "lentDate": "March 24, 2026 at 05:59 AM",
+      "returnDate": "March 24, 2026 at 06:01 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260323220018296-864",
+      "studentId": "11111111111",
+      "bookId": "9780141439518",
+      "fullname": "Jane Doe",
+      "year": "College",
+      "bookTitle": "Pride and Prejudice",
+      "lentDate": "March 24, 2026 at 06:00 AM",
+      "returnDate": "March 24, 2026 at 06:00 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260323220604278-688",
+      "studentId": "22015241610",
+      "bookId": "9780141439518",
+      "fullname": "Dominic Gregorio",
+      "year": "Admin",
+      "bookTitle": "Pride and Prejudice",
+      "lentDate": "March 24, 2026 at 06:06 AM",
+      "returnDate": "March 24, 2026 at 06:06 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260323220816626-422",
+      "studentId": "11111111111",
+      "bookId": "9780060850524",
+      "fullname": "Jane Doe",
+      "year": "College",
+      "bookTitle": "Brave New World",
+      "lentDate": "March 24, 2026 at 06:08 AM",
+      "returnDate": "March 24, 2026 at 06:09 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260323220819567-646",
+      "studentId": "22222222222",
+      "bookId": "9780060850524",
+      "fullname": "Mark Sumlay",
+      "year": "College",
+      "bookTitle": "Brave New World",
+      "lentDate": "March 24, 2026 at 06:08 AM",
+      "returnDate": "March 24, 2026 at 06:17 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260323220822157-941",
+      "studentId": "33333333333",
+      "bookId": "9780060850524",
+      "fullname": "John Christian",
+      "year": "College",
+      "bookTitle": "Brave New World",
+      "lentDate": "March 24, 2026 at 06:08 AM",
+      "returnDate": "March 24, 2026 at 06:17 AM",
+      "approvedBy": "Dominic Gregorio"
+    },
+    {
+      "id": "TXN-20260323220929727-239",
+      "studentId": "22015241610",
+      "bookId": "9780060850524",
+      "fullname": "Dominic Gregorio",
+      "year": "Admin",
+      "bookTitle": "Brave New World",
+      "lentDate": "March 24, 2026 at 06:09 AM",
+      "returnDate": "March 24, 2026 at 06:17 AM",
+      "approvedBy": "Dominic Gregorio"
     }
   ]
 }

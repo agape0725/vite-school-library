@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import data from "../../data/db.json"; // adjust path if needed
 import styles from "./ViewBook.module.css";
 import Loader from "./Loader";
 import ErrorFetch from "./ErrorFetch";
@@ -11,48 +12,44 @@ function ViewBook() {
   const [bookDetails, setBookDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
-  const [authorName, setAuthorName] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchBookDetails = async () => {
-      setIsLoading(true);
-      setError("");
+    setIsLoading(true);
+    setError("");
 
-      try {
-        const response = await fetch(
-          `https://openlibrary.org/works/${id}.json`
-        );
-        if (!response.ok) throw new Error("Failed to fetch book details");
+    // Find the book in local data by matching 'id' to book key or id field
+    const findBook = () => {
+      // Depending on how your local data's key/id looks, adapt this
+      // Here assuming key looks like "/works/OL1234W", so we strip "/works/" prefix to compare with id param
+      const book = data.books.find((b) => b.key === id);
 
-        const data = await response.json();
-
-        const authorKey = data.authors[0].author.key;
-        if (authorKey) {
-          const resAuthor = await fetch(
-            `https://openlibrary.org${authorKey}.json`
-          );
-          const dataAuthor = await resAuthor.json();
-          setAuthorName(dataAuthor.name);
-        }
-
-        setBookDetails(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setIsLoading(false);
+      if (!book) {
+        setError("No book found");
+        setBookDetails(null);
+      } else {
+        setBookDetails(book);
       }
+      setIsLoading(false);
     };
 
-    fetchBookDetails();
+    findBook();
   }, [id]);
 
   function content() {
     if (isLoading) return <Loader />;
     if (error) return <ErrorFetch message={error} />;
     if (!bookDetails) return <ErrorFetch message="No book found" />;
-    if (bookDetails && !isLoading && !error)
-      return <BookDetails details={bookDetails} author={authorName} />;
+    return (
+      <BookDetails
+        details={bookDetails}
+        author={
+          bookDetails.author_name
+            ? bookDetails.author_name.join(", ")
+            : "Unknown Author"
+        }
+      />
+    );
   }
 
   return (
@@ -60,6 +57,7 @@ function ViewBook() {
       <Overlay
         opacity="opacity-75"
         position="fixed"
+        zIndex="z-50"
         onClick={() => navigate("/library")}
       />
       <div className={`${styles.details}`}>{content()}</div>

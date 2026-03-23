@@ -5,7 +5,7 @@ import SectionTitle from "./SectionTitle";
 
 function Steps() {
   return (
-    <Section backgroundColor="bg-[rgba(255,180,51,.6)]" padding="px-4">
+    <Section backgroundColor="bg-[rgba(255,180,51,.6)]">
       <SectionTitle fontColor="text-dirtyWhite">
         Steps on how to borrow
       </SectionTitle>

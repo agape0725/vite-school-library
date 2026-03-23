@@ -1,106 +1,28 @@
-// // import { useState } from "react";
-// // import PageNav from "../components/PageNav";
-// // import LibraryBooks from "../components/LibraryBooks";
-// // import Overlay from "../components/Overlay";
-// // import { Outlet } from "react-router-dom";
-
-// // function Library() {
-// //   const [bookDetails, setBookDetails] = useState({
-// //     author_key: "",
-// //     title: "",
-// //     description: "",
-// //     author_name: "",
-// //     first_publish_year: "",
-// //     rating: "",
-// //     cover_i: "",
-// //   });
-
-// //   return (
-// //     <>
-// //       <div>
-// //         <PageNav />
-// //         <LibraryBooks setBookDetails={setBookDetails} />
-// //         <Outlet context={{ bookDetails }} />
-// //       </div>
-// //     </>
-// //   );
-// // }
-
-// // export default Library;
-
-// import { useState } from "react";
-// import PageNav from "../components/PageNav";
-// // import LibraryBooks from "../components/LibraryBooks";
-// import Overlay from "../components/Overlay";
-// import { Outlet } from "react-router-dom";
-
-// function Library() {
-//   // const [bookDetails, setBookDetails] = useState({
-//   //   author_key: "",
-//   //   title: "",
-//   //   description: "",
-//   //   author_name: "",
-//   //   first_publish_year: "",
-//   //   rating: "",
-//   //   cover_i: "",
-//   // });
-
-//   return (
-//     <>
-//       <div>
-//         <PageNav />
-//         {/* <LibraryBooks setBookDe tails={setBookDetails} /> */}
-//         {/* <Outlet context={{ bookDetails }} /> */}
-//         <Outlet />
-//       </div>
-//     </>
-//   );
-// }
-
-// export default Library;
-
-// import { useState } from "react";
-// import PageNav from "../components/PageNav";
-// import LibraryBooks from "../components/LibraryBooks";
-// import Overlay from "../components/Overlay";
-// import { Outlet } from "react-router-dom";
-
-// function Library() {
-//   const [bookDetails, setBookDetails] = useState({
-//     author_key: "",
-//     title: "",
-//     description: "",
-//     author_name: "",
-//     first_publish_year: "",
-//     rating: "",
-//     cover_i: "",
-//   });
-
-//   return (
-//     <>
-//       <div>
-//         <PageNav />
-//         <LibraryBooks setBookDetails={setBookDetails} />
-//         <Outlet context={{ bookDetails }} />
-//       </div>
-//     </>
-//   );
-// }
-
-// export default Library;
 import PageNav from "../components/PageNav";
 import Books from "../components/Books";
 import { Outlet } from "react-router-dom";
+import stackBookImage from "../assets/images/open-book.png";
 
-function Library({ bookDetails, setBookDetails }) {
+function Library() {
   return (
-    <>
-      <div>
-        <PageNav />
-        <Books setBookDetails={setBookDetails} />
-        <Outlet context={{ bookDetails }} />
-      </div>
-    </>
+    <div className="flex flex-col min-h-screen relative">
+      <PageNav bgColor="bg-orange100" fontColor="text-white" />
+
+      <main className="relative flex-1">
+        {/* Background image */}
+        <div
+          className="absolute bottom-2 right-14 w-[80vh] h-[50vh] bg-no-repeat bg-right-bottom opacity-10 lg:opacity-20 z-[-1]"
+          style={{
+            backgroundImage: `url(${stackBookImage})`,
+            backgroundSize: "contain",
+          }}
+        />
+
+        {/* Main content */}
+        <Books />
+        <Outlet />
+      </main>
+    </div>
   );
 }
 

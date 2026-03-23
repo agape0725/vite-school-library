@@ -10,11 +10,15 @@ function Account() {
   return (
     <div className={`${styles.account}`}>
       <div className="p-3 absolute">
-        <Button onClick={() => navigate("/")} type="btn1" padding="padding2">
+        <Button
+          onClick={() => navigate("/")}
+          buttonStyleType="btn1"
+          padding="padding2"
+        >
           &larr; BACK
         </Button>
       </div>
-      <h1>helloworlds</h1>
+      {/* <h1>helloworld</h1> */}
       {/* <Login />
       <Signup /> */}
       <Link to="login">Login</Link>

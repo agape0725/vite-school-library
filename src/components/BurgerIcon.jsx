@@ -1,5 +1,4 @@
 import burgerIcon from "../assets/icons/burger-bar.png";
-import closeIcon from "../assets/icons/close.png";
 
 function BurgerIcon({ openNav, onHandleNav }) {
   return (

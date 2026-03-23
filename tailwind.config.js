@@ -18,6 +18,8 @@ export default {
         black900: "#1A1A1D",
         orange100: "#FFB433",
         orange200: "#EC5228",
+        orange300: "#FFA500",
+        //
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

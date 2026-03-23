@@ -1,25 +1,41 @@
-import Button from "../components/Button";
+import { Link, useNavigate } from "react-router-dom";
 import Forms from "../components/Forms";
-import { useNavigate, Link } from "react-router-dom";
 import AccountInput from "../components/AccountInput";
-import { useState } from "react";
+import BackButton from "../components/BackButton";
+import Button from "../components/Button";
+import { useAccounts } from "../contexts/AccountsContext";
+import { useEffect, useState } from "react";
 
 function Login() {
-  const navigate = useNavigate();
+  const { login, isAuthenticated, error, clearError } = useAccounts();
   const [studentNumber, setStudentNumber] = useState("");
   const [studentPassword, setStudentPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit");
+    if (!studentNumber.trim() || !studentPassword.trim()) return;
+    login(studentNumber, studentPassword);
   };
+
+  useEffect(() => {
+    if (isAuthenticated) navigate(`/account/dashboard`, { replace: true });
+  }, [isAuthenticated, navigate]);
+
+  useEffect(() => {
+    if (!error) return;
+
+    const timer = setTimeout(() => {
+      clearError();
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [error, clearError]);
 
   return (
     <Forms>
       <div className="p-3 absolute z-50">
-        <Button onClick={() => navigate("/")} type="btn1" padding="padding2">
-          &larr; BACK
-        </Button>
+        <BackButton />
       </div>
 
       <AccountInput
@@ -32,8 +48,20 @@ function Login() {
         onSubmit={handleSubmit}
         style={"translate-y-0"}
       >
+        <p
+          className={`text-orange200 text-center transition-opacity duration-500 ${
+            error ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {error}
+        </p>
         <div className="flex flex-col gap-3 text-center">
-          <Button type="btn1" padding="padding2" hover="hover1">
+          <Button
+            type="submit"
+            buttonStyleType="btn1"
+            padding="padding2"
+            hover="hover1"
+          >
             SIGN-IN
           </Button>
           <span className="text-xs font-light text-black">

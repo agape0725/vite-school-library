@@ -1,5 +1,6 @@
 .nav {
-  @apply relative flex items-center justify-between shadow-inner py-1 px-10 bg-dirtyWhite;
+  @apply relative flex items-center justify-between py-1 px-10;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   overflow-x: hidden;
 }
 
@@ -11,10 +12,10 @@
 }
 
 .nav ul {
-  @apply md:flex items-center gap-3 md:gap-6 text-lg md:text-sm;
+  @apply relative md:flex items-center gap-3 md:gap-6 text-lg md:text-sm;
 }
 
-.nav div > img {
+/* .nav div > img {
   @apply absolute w-5 md:hidden cursor-pointer;
   left: 10px;
-}
+} */

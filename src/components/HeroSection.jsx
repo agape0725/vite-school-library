@@ -1,8 +1,12 @@
 import library from "../assets/images/library.jpg";
 import Overlay from "./Overlay";
 import Button from "./Button";
+import { Link } from "react-router-dom";
+import { useAccounts } from "../contexts/AccountsContext";
 
 function HeroSection() {
+  const { isAuthenticated } = useAccounts();
+
   return (
     <header
       className="relative h-[500px] flex items-center justify-center text-center text-white bg-cover bg-no-repeat bg-center"
@@ -16,9 +20,11 @@ function HeroSection() {
         <p className="mt-4 mb-10 text-white text-sm md:text-1xl">
           Discover, Learn, and Explore a World of Knowledge
         </p>
-        <Button type="btn3" padding="padding2" hover="hover3">
-          Explore Books
-        </Button>
+        <Link to={`${isAuthenticated ? "/library" : "/login"}`}>
+          <Button buttonStyleType="btn3" padding="padding2" hover="hover3">
+            Explore Books
+          </Button>
+        </Link>
       </div>
     </header>
   );

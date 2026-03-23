@@ -1,0 +1,94 @@
+// {
+//   "docs": [
+//     {
+//       "key": "11",
+//       "title": "To Kill a Mockingbird",
+//       "author_name": ["Harper Lee"],
+//       "first_publish_year": 1960,
+//       "book_cover": "assets/book-cover/to-kill-a-mockingbird.jpg",
+//       "description": "A novel about the serious issues of rape and racial inequality narrated by young Scout Finch.",
+//       "rating": 4.27
+//     },
+//     {
+//       "key": "22",
+//       "title": "1984",
+//       "author_name": ["George Orwell"],
+//       "first_publish_year": 1949,
+//       "book_cover": "assets/book-cover/1984.jpg",
+//       "description": "A dystopian novel set in a totalitarian society under constant surveillance.",
+//       "rating": 4.17
+//     },
+//     {
+//       "key": "33",
+//       "title": "Pride and Prejudice",
+//       "author_name": ["Jane Austen"],
+//       "first_publish_year": 1813,
+//       "book_cover": "assets/book-cover/pride-and-prejudice.jpg",
+//       "description": "A romantic novel that charts the emotional development of Elizabeth Bennet.",
+//       "rating": 4.25
+//     },
+//     {
+//       "key": "44",
+//       "title": "The Great Gatsby",
+//       "author_name": ["F. Scott Fitzgerald"],
+//       "first_publish_year": 1925,
+//       "book_cover": "assets/book-cover/the-great-gatsby.jpg",
+//       "description": "A critique of the American Dream set in the Jazz Age.",
+//       "rating": 3.91
+//     },
+//     {
+//       "key": "55",
+//       "title": "Moby-Dick",
+//       "author_name": ["Herman Melville"],
+//       "first_publish_year": 1851,
+//       "book_cover": "assets/book-cover/moby-dick.jpg",
+//       "description": "The narrative of Captain Ahab’s obsessive quest to kill the white whale.",
+//       "rating": 3.49
+//     },
+//     {
+//       "key": "66",
+//       "title": "The Catcher in the Rye",
+//       "author_name": ["J.D. Salinger"],
+//       "first_publish_year": 1951,
+//       "book_cover": "assets/book-cover/the-catcher-in-the-rye.jpg",
+//       "description": "A story about adolescent alienation and loss of innocence.",
+//       "rating": 3.81
+//     },
+//     {
+//       "key": "77",
+//       "title": "Brave New World",
+//       "author_name": ["Aldous Huxley"],
+//       "first_publish_year": 1932,
+//       "book_cover": "assets/book-cover/brave-new-world.jpg",
+//       "description": "A dystopian novel about a genetically engineered society.",
+//       "rating": 3.99
+//     },
+//     {
+//       "key": "88",
+//       "title": "The Hobbit",
+//       "author_name": ["J.R.R. Tolkien"],
+//       "first_publish_year": 1937,
+//       "book_cover": "assets/book-cover/the-hobbit.jpg",
+//       "description": "Bilbo Baggins' adventurous quest to win a share of treasure guarded by a dragon.",
+//       "rating": 4.27
+//     },
+//     {
+//       "key": "99",
+//       "title": "Fahrenheit 451",
+//       "author_name": ["Ray Bradbury"],
+//       "first_publish_year": 1953,
+//       "book_cover": "assets/book-cover/farenheit-451.jpg",
+//       "description": "A dystopian novel about a future where books are outlawed and burned.",
+//       "rating": 3.99
+//     },
+//     {
+//       "key": "00",
+//       "title": "Jane Eyre",
+//       "author_name": ["Charlotte Brontë"],
+//       "first_publish_year": 1847,
+//       "book_cover": "assets/book-cover/jane-eyre.jpg",
+//       "description": "A novel about the experiences of the titular heroine, including her growth to adulthood.",
+//       "rating": 4.12
+//     }
+//   ]
+// }

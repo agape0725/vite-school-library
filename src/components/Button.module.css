@@ -7,7 +7,7 @@
 }
 
 .btn2 {
-  @apply text-blue900  border border-blue900 rounded-md text-sm;
+  @apply text-blue900 border border-blue900 rounded-md text-sm;
 }
 
 .btn3 {
@@ -24,6 +24,10 @@
 
 .padding2 {
   @apply px-4 py-2.5 md:px-7 md:py-3;
+}
+
+.padding3 {
+  @apply px-2 py-1;
 }
 
 .hover1:hover {

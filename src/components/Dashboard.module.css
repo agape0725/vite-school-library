@@ -1,0 +1,50 @@
+.dashboard {
+  @apply flex flex-col m-0 gap-5; /* padding for spacing */
+}
+
+.boxContainer {
+  @apply grid gap-5 sm:grid-cols-2 lg:grid-cols-3; /* Responsive grid */
+}
+
+.box {
+  @apply bg-blue500/60 p-4 w-full max-w-xs rounded-xl flex flex-col gap-3 font-inter;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.box > h1 {
+  @apply text-xs text-right text-white;
+}
+
+.box > div {
+  @apply flex justify-between items-center;
+}
+
+.box > div > div {
+  @apply p-4 rounded-full bg-orange300/90;
+  /* bg-[#BC9B78]/80 */
+}
+
+.box > div > span {
+  @apply text-xl font-semibold text-white;
+}
+
+.box > div img {
+  @apply w-8 h-8;
+  filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(24deg)
+    brightness(104%) contrast(101%);
+}
+
+/* Responsive fallback (if needed) */
+@media (max-width: 768px) {
+  .dashboard {
+    @apply px-4;
+  }
+
+  .boxContainer {
+    @apply grid grid-cols-1 place-items-center;
+  }
+
+  .box {
+    @apply w-full max-w-sm;
+  }
+}

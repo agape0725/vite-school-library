@@ -1,5 +1,6 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import data from "../../data/db.json";
 import Book from "./Book";
 import Button from "./Button";
 import Loader from "./Loader";
@@ -7,97 +8,78 @@ import ErrorFetch from "./ErrorFetch";
 import Section from "./Section";
 import SectionTitle from "./SectionTitle";
 import SearchQuery from "./SearchQuery";
+import { useAccounts } from "../contexts/AccountsContext";
 
-function Books() {
+function Books({ shadowStyle = "shadow-none" }) {
   const [books, setBooks] = useState([]);
-  const [query, setQuery] = useState("history");
+  const [query, setQuery] = useState("");
   const [searchBy, setSearchBy] = useState("title");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState(query);
-  const controllerRef = useRef(null);
   const location = useLocation();
   const [displayCount, setDisplayCount] = useState(8);
+  const { isAuthenticated } = useAccounts();
 
-  // Debugging: Log isLoading changes
-  // useEffect(() => {
-  //   console.log("isLoading:", isLoading);
-  // }, [isLoading]);
+  const notLibrary = !location.pathname.startsWith("/library");
 
-  // **Debounce the search query**
+  // Debounce query input
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedQuery(query);
     }, 400);
-
     return () => clearTimeout(timer);
   }, [query]);
 
   useEffect(() => {
-    if (debouncedQuery.trim() !== "") {
-      setIsLoading(true); // Ensure loading state is set before fetching
-      fetchBooks();
-    }
-
-    async function fetchBooks() {
-      // Abort previous request if exists
-      if (controllerRef.current) {
-        controllerRef.current.abort();
-      }
-
-      const controller = new AbortController();
-      controllerRef.current = controller;
-      const { signal } = controller;
-
+    const fetchBooks = () => {
       try {
         setError("");
+        const queryLower = debouncedQuery.toLowerCase();
 
-        const res = await fetch(
-          `https://openlibrary.org/search.json?${searchBy}=${debouncedQuery}`,
-          { signal }
-        );
+        let filteredBooks = data.books.filter((book) => {
+          if (searchBy === "title") {
+            return book.title.toLowerCase().includes(queryLower);
+          } else if (searchBy === "author") {
+            return (
+              book.author_name &&
+              book.author_name.some((author) =>
+                author.toLowerCase().includes(queryLower)
+              )
+            );
+          } else if (searchBy === "category") {
+            return (
+              book.category &&
+              book.category.some((c) => c.toLowerCase().includes(queryLower))
+            );
+          }
+          return false;
+        });
 
-        if (!res.ok) throw new Error(`Search failed`);
-
-        const data = await res.json();
-
-        if (!data.docs || data.docs.length === 0) {
+        if (filteredBooks.length === 0) {
           throw new Error("No books found");
         }
 
-        // Shuffle books randomly for default query
-        const booksApi =
-          debouncedQuery === "harry+potter"
-            ? [...data.docs].sort(() => Math.random() - 0.5)
-            : data.docs;
-
-        setBooks(booksApi);
-        setDisplayCount(8);
+        setBooks(filteredBooks);
+        setDisplayCount(notLibrary ? 8 : 10);
       } catch (err) {
-        if (err.name !== "AbortError") {
-          console.error("Error fetching books:", err);
-          setError(err.message);
-        }
+        setError(err.message);
+        setBooks([]);
       } finally {
-        // Only set isLoading(false) if the request was not aborted
-        if (!signal.aborted) {
-          setIsLoading(false);
-        }
-      }
-    }
-
-    return () => {
-      if (controllerRef.current) {
-        controllerRef.current.abort();
+        setIsLoading(false);
       }
     };
-  }, [debouncedQuery]);
+
+    setIsLoading(true);
+    fetchBooks();
+  }, [debouncedQuery, searchBy, notLibrary]);
+
+  const gridCols = notLibrary
+    ? "grid-cols-2 sm:grid-cols-4 lg:grid-cols-8"
+    : "grid-cols-3 sm:grid-cols-5 lg:grid-cols-10";
 
   return (
-    <Section
-      backgroundColor="bg-dirtyWhite"
-      shadow="shadow-[1.95px_1.95px_2.6px_rgba(0,0,0,0.25)]"
-    >
+    <Section shadow={shadowStyle}>
       <SectionTitle fontColor="text-orange100">Books</SectionTitle>
       <SearchQuery
         onSearchQuery={setQuery}
@@ -105,31 +87,42 @@ function Books() {
         onSearchBy={setSearchBy}
       />
 
-      {/* Loader should show while fetching data */}
       {isLoading && <Loader />}
 
-      {/* Show error message if fetch fails */}
       {error && <ErrorFetch message={error} />}
 
       {!isLoading && !error && (
         <>
-          <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-8 m-auto gap-1">
-            {books.slice(0, displayCount).map((book) => (
-              <Link
-                key={book.key}
-                to={`/library/${book.key.replace("/works/", "")}`}
-              >
-                <Book book={book} />
-              </Link>
-            ))}
+          <ul className={`grid ${gridCols} m-auto gap-2`}>
+            {books.slice(0, displayCount).map((book) =>
+              isAuthenticated ? (
+                book.isLost ? (
+                  <div key={book.key} className="cursor-not-allowed">
+                    <Book book={book} />
+                  </div>
+                ) : (
+                  <Link
+                    key={book.key}
+                    to={`/library/${book.key}`}
+                    state={{ book }}
+                  >
+                    <Book book={book} />
+                  </Link>
+                )
+              ) : (
+                <Link key={book.key} to="/login">
+                  <Book book={book} />
+                </Link>
+              )
+            )}
           </ul>
 
-          {!location.pathname.startsWith("/library") ? (
+          {notLibrary ? (
             <Link
-              to="/library"
+              to={`${isAuthenticated ? "/library" : "/login"}`}
               className="text-sm text-blue900 m-auto cursor-pointer"
             >
-              <Button type="btn1" padding="padding1" hover="hover1">
+              <Button buttonStyleType="btn1" padding="padding1" hover="hover1">
                 Go to library
               </Button>
             </Link>
@@ -137,7 +130,7 @@ function Books() {
             displayCount < books.length && (
               <div className="m-auto">
                 <Button
-                  type="btn1"
+                  buttonStyleType="btn1"
                   padding="padding1"
                   hover="hover1"
                   onClick={() => setDisplayCount((prev) => prev + 10)}

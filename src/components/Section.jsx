@@ -3,12 +3,12 @@ function Section({
   backgroundColor = "bg-none",
   width,
   margin,
-  padding = "px-4",
+  padding = "px-4 pb-10",
   shadow,
 }) {
   return (
     <div
-      className={`flex flex-col gap-5 pb-10 ${backgroundColor} ${width} ${margin} ${padding} ${shadow}`}
+      className={`flex flex-col gap-5 ${backgroundColor} ${width} ${margin} ${padding} ${shadow}`}
     >
       {children}
     </div>
